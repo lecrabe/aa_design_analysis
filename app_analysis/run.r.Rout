@@ -1,0 +1,67 @@
+
+R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> require(shiny)
+Loading required package: shiny
+> runApp('.app_analysis/',launch.browser = T)
+
+Listening on http://127.0.0.1:4749
+Loading required package: ggplot2
+Loading required package: xtable
+Loading required package: raster
+Loading required package: sp
+Loading required package: shinydashboard
+
+Attaching package: 'shinydashboard'
+
+The following object is masked from 'package:graphics':
+
+    box
+
+Loading required package: dismo
+Loading required package: stringr
+Loading required package: snow
+Loading required package: plyr
+Loading required package: leaflet
+Loading required package: RColorBrewer
+Loading required package: DT
+
+Attaching package: 'DT'
+
+The following objects are masked from 'package:shiny':
+
+    dataTableOutput, renderDataTable
+
+Loading required package: rgeos
+rgeos version: 0.3-20, (SVN revision 535)
+ GEOS runtime version: 3.5.0-CAPI-1.9.0 r4084 
+ Linking to sp version: 1.2-3 
+ Polygon checking: TRUE 
+
+Loading required package: rgdal
+rgdal: version: 1.1-10, (SVN revision 622)
+ Geospatial Data Abstraction Library extensions to R successfully loaded
+ Loaded GDAL runtime: GDAL 2.0.1, released 2015/09/15
+ Path to GDAL shared files: C:/Users/dannunzio/Documents/R/win-library/3.3/rgdal/gdal
+ Loaded PROJ.4 runtime: Rel. 4.9.2, 08 September 2015, [PJ_VERSION: 492]
+ Path to PROJ.4 shared files: C:/Users/dannunzio/Documents/R/win-library/3.3/rgdal/proj
+ Linking to sp version: 1.2-3 
+Loading required package: shinyFiles
+Loading required package: htmltools
+[1] "Starting the process"
