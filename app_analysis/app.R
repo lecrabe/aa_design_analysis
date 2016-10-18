@@ -1,5 +1,5 @@
 ####################################################################################
-#######          Shiny app for accuracy assessment design       ####################
+#######          Shiny app for accuracy assessment analysis     ####################
 #######    contributors:  Remi d'Annunzio, Yelena Finegold,     ####################
 #######            Antonia Ortmann, Erik Lindquist              ####################
 #######              FAO Open Foris SEPAL project               ####################
@@ -16,7 +16,8 @@
 ####################################################################################
 
 ####################################################################################
-## Last update: 2016/09/29
+## Last update: 2016/10/10
+## 
 ####################################################################################
 
 
@@ -662,6 +663,7 @@ server <- function(input, output,session) {
     for(i in 1:length(legend)){
       for(j in 1:length(legend)){
         tryCatch({
+          areas <- areas[areas$map_value %in% legend,]
           matrix_w[i,j] <- matrix[i,j]/sum(matrix[i,])*areas[areas$map_class==legend[i],]$map_area/sum(areas$map_area)
         }, error=function(e){cat("Not relevant\n")}
         )
@@ -671,6 +673,7 @@ server <- function(input, output,session) {
     for(i in 1:length(legend)){
       for(j in 1:length(legend)){
         tryCatch({
+          areas <- areas[areas$map_value %in% legend,]
           matrix_se[i,j] <- areas[areas$map_class==legend[i],]$map_area/sum(areas$map_area)*areas[areas$map_class==legend[i],]$map_area/sum(areas$map_area)*
             matrix[i,j]/
             sum(matrix[i,])*
